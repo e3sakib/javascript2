@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=i, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Name <input type="text" id="sn"><br><br>
+    Phone <input type="number" name="phone" id="sp"><br><br>
+    Gender <input type="radio" name="gen" class="g" value="Male" id="male">Male
+    <input type="radio" name="gen" class="g" value="Female" id="female">Female<br><br>
+    <input type="button" value="submit" onclick="vf()"><br><br>
+    <span id="msg"></span>
+    <script>
+        function vf() {
+            var sn = document.getElementById("sn").value;
+            var sp = document.getElementById("sp").value;
+            var male = document.getElementById("male").value;
+            var female = document.getElementById("female").value;
+
+            if (sn.length<1) {
+                msg.innerHTML="Input Name";
+            }
+            else if (sp.length<1) {
+                msg.innerHTML="Input Phone No";
+            }
+            else { var gen = "";
+            if (male.checked) {
+                gen = "male";
+            }
+            if (female.checked) {
+                gen = "female";
+            }
+              
+                var html = `Name:${sn}<br><br>
+                           Phone:${sp}<br><br>
+                           Gender:${gen}<br><br>`
+                
+                       //    msg.innerHTML=  html;  
+                       msg.innerHTML+="submitted<br>" +html ;
+                var w = window.open();
+                w.document.write(html);       
+            }
+        }
+    </script>
+</body>
+</html>

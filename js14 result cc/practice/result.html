@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade Calculation</title>
+ <style>
+ 
+ input{
+	display: block;
+ }
+ </style>
+</head>
+<body>
+
+Bangla <input type="text" id ="bangla">
+English <input type="text" id ="english">
+Math <input type="text" id ="math">
+Islamic Studies <input type="text" id ="islamic">
+
+
+<input type="button" onclick="calResult()" value="Calculate Result"/>
+<input type="button" onclick="resetAll()" value="resest"/>
+   
+
+
+<script>
+function calResult(){
+
+var result = "";
+
+var bangla =parseFloat( document.getElementById('bangla').value);
+var english = parseFloat(document.getElementById('english').value);
+var math = parseFloat(document.getElementById('math').value);
+var islamic =parseFloat( document.getElementById('islamic').value);
+
+if(bangla<33 || english <33 || math <33 || islamic < 33){
+result = "failed";
+}else {
+
+var total = bangla+ english+ math + islamic;
+ 
+var avg = total/4;
+console.log(avg);
+
+
+////
+if(avg >= 80){
+result = "A+";
+
+}else if(avg <=79 && avg >69 ){
+result = "A-";
+
+}else if(avg <=69 && avg >59 ){
+result = "B";
+
+}else if(avg <=59 && avg >49 ){
+result = "C";
+
+}else if(avg <=49 && avg >39 ){
+result = "D";
+
+}
+
+
+}
+
+
+alert(result);
+
+}
+
+ 
+
+
+function resetAll(){
+document.getElementById('bangla').value="";
+document.getElementById('english').value="";
+document.getElementById('math').value="";
+document.getElementById('islamic').value="";
+
+}
+</script>
+</body>
+</html>

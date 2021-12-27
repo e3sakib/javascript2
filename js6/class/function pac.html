@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<title>function</title>
+	</head>
+	<body>
+		<script>
+		/* function functionName(optional parameter){//function body}
+		 
+		function print(){
+		console.log("Hello World");
+		}
+		print();
+		
+		
+		function add(a,b){
+		var result= a+b;
+		console.log(result);
+		}
+		add();
+		add(777,77);
+		*/
+		
+		
+		 var bangla=prompt("Type your marks on bangla");
+		 var english=prompt("Type your marks on english");
+		 var math=prompt("Type your marks on math");
+		 var chemistry=prompt("Type your marks on chemistry");
+		 
+		 bangla = parseFloat(bangla);
+		 english= parseFloat(english);
+		math = parseFloat (math);
+		chemistry = parseFloat(chemistry);
+		 
+		function averageMarks(bangla,english,math,chemistry){
+		var add= (bangla+english+math+chemistry);
+		var average = (add/4);
+		console.log(average);
+		document.write("AVERAGE MARKS : "+average);
+		alert("your average mark"+average);
+		}
+		averageMarks(bangla,english,math,chemistry);
+		
+		</script>
+	</body>
+</html>

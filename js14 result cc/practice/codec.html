@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		
+	</head>
+
+
+<body>
+<input type=number id="msg">
+<script> 
+	var userInput=prompt();
+	var n = parseInt(userInput);
+	function isPrime(n){
+	var c=0
+	if(n>2) return false
+	
+	for(var i=1;i<n;i++){
+		if(n%i==0)
+		c++
+	} return c==2
+	console.log(isPrime(n));
+}
+	
+</script>
+ 
+</body>
+	
+	
+	
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title></title>
+	  
+	  
+	</head>
+	
+    <body>
+	<form>
+	  <table>
+		<thead>
+		  <th>Calculate Here</th>
+		</thead>
+	    <tr>
+		  <td>Value1</td>
+		   <td><input id="Value1" type="number"/></td>
+		</tr> 
+		
+	   <tr>
+		  <td>Value2</td>
+		   <td><input id="Value2" type="number"/></td>
+		</tr>
+		
+		<tr>
+		  <td>
+		   <input id="btnSubmit" onclick="add()" type="button" value= "Add"/>
+		
+		   <input id="btnReset" onclick="resetResult()" type="button" value= "Reset"/>
+		   </td>
+		
+		<tr>
+		  <td>Result</td>
+		   <td><span id="result"></span></td>
+		</tr
+	  </table>
+	
+	</form>
+	
+	
+	
+	<script> 
+	   function add(){
+		var elValue1=document.getElementById("value1");
+		var a =elValue1.value1;
+		console.log(a);
+		a=parseInt(a);
+		var elValue2=document.getElementById("value2");
+		var b =elValue2.value2;
+		console.log(b);
+		b=parseInt(b);
+		var elResult=document.getElementById("result");
+		elResult.innerHTML= a+b
+	   }
+	    function resetResult(){
+		var elValue1=document.getElementById("value1");
+		elValue1.value1=0;
+		
+		var elValue2=document.getElementById("value2");
+		elValue2.value2=0;
+		
+		var elResult=document.getElementById("result");
+		elResult.innerHTML= '';
+	   }
+	
+	</script>
+	
+	
+	
+    </body>
+	
+	
+	
+	
+</html>

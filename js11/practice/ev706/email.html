@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>email</title>
+</head>
+<body>
+  Enter email  <input type="email" id="in">
+   <input type="button" value="Check validity" onclick="clk()"> 
+   <span id="msg"></span>
+   <script>
+       function clk() {
+           
+            var email = document.getElementById("in").value;
+            var rex = /^[a-z0-9]+@[a-z0-9]+\.[a-z]{2,5}$/;
+            if (email.match(rex)) {
+                msg.innerHTML= "VALID";
+            } else {
+                msg.innerHTML= "INVALID"
+            }
+       }
+   </script>
+</body>
+</html>
